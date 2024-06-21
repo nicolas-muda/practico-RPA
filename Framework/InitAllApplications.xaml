@@ -1,0 +1,258 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>790,3824</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="800,3759" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="738,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Nueva pestaña" sap:VirtualizedContainerService.HintSize="738,3467" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2d99a062-bd48-4e2e-8baa-ccd7680fbbf7" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704,3227" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'combo box'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="642,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="2d99a062-bd48-4e2e-8baa-ccd7680fbbf7" Text="[&quot;rpa challenge&quot;+&quot;[k(enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="chrome://newtab/" CVScreenId="625dc770-bb81-46a7-a7b4-3f385f0dc4d6" CvTextArea="459, 457, 257, 14" CvTextArgument="Buscar en Google O escribir una URL" CvType="Text" DesignTimeRectangle="407, 441, 562, 44" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='Nueva pestaña' role='document' /&gt;&lt;ctrl name='Buscar en Google o escribir una URL' role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Nueva pestaña' role='document' /&gt;&lt;ctrl name='Buscar en Google o escribir una URL' role='combo box' automationid='' /&gt;" Guid="a9d7aaf7-9a0f-4721-a3bc-701968214566" InformativeScreenshot="f1986ea52a17707c1936e7ad25d202be.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Nueva pestaña - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Rpa Challenge'" sap:VirtualizedContainerService.HintSize="642,189" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2d99a062-bd48-4e2e-8baa-ccd7680fbbf7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.google.com/search?q=rpa+challenge&amp;rlz=1C1UUXU_esAR1090AR1090&amp;oq=&amp;gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxjCAzIJCAAQRRg7GMIDMg8IARAuGAMYjwEYtAIY6gIyDwgCEC4YAxiPARi0AhjqAjIRCAMQABgDGEIYjwEYtAIY6gIyDwgEEC4YAxiPARi0AhjqAjIRCAUQABgDGEIYjwEYtAIY6gIyDwgGEC4YAxiPARi0AhjqAjIRCAcQABgDGEIYjwEYtAIY6gLSAQg4NTlqMGoxNagCCLACAQ&amp;sourceid=chrome&amp;ie=UTF-8" CVScreenId="3d6872b2-0982-437e-abfb-bb5589693161" CvTextArea="187, 420, 134, 22" CvTextArgument="Rpa Challenge" CvType="Text" DesignTimeRectangle="188, 412, 132, 31" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='rso' tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='rso' tag='H3' type='' class='LC20lb MBeuO DKV0Md' aaname='Rpa Challenge' check:innerText='Rpa Challenge' /&gt;" Guid="d2aa5b1b-0082-460f-ba51-e71fb5e3277d" InformativeScreenshot="b480ec0d4c1c805fcb97abd39f11571f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='rpa challenge - Buscar con Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="188, 373, 600, 73" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='rso' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='rso' tag='DIV' class='' aaname='' check:innerText='Rpa Challenge&amp;#xD;&amp;#xA;Rpa Challenge&amp;#xD;&amp;#xA;https://rpachallenge.com&amp;#xD;&amp;#xA;·&amp;#xD;&amp;#xA;Traducir esta página' /&gt;" Guid="a2414fc2-f2d0-42d1-96ec-9f884abd9873" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Download Excel'" sap:VirtualizedContainerService.HintSize="642,189" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2d99a062-bd48-4e2e-8baa-ccd7680fbbf7" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="d619947b-76cc-4eca-910b-21e65d65e743" CvElementArea="17, 635, 313, 40" CvTextArea="85, 647, 142, 14" CvTextArgument="DOWNLOAD EXCEL" CvType="Button" DesignTimeRectangle="19, 637, 309, 36" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Download Excel cloud_download' tag='A' type='' class=' col s12 m12 l12 btn waves-effect waves-light uiColorPrimary center' check:innerText='DOWNLOAD EXCEL&amp;#xD;&amp;#xA;cloud_download' /&gt;" Guid="14a99609-39aa-4402-9945-e68a4f1a113b" InformativeScreenshot="d5298d28f4b8380efb54bc5e94f071b0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="642,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="642,2387" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,2275" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="546,1971" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="C:\Users\Administrador\Downloads\challenge.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1670" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:WriteCellX Cell="[Excel.Sheet(&quot;Sheet1&quot;).Cell(&quot;h1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="450,191" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;Status&quot;]" />
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Status'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_3" InScope="[Excel]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable CVScreenId="8c7ad783-c71f-4078-84f1-7e1b9d6c2937" CvTextArea="958, 220, 39, 12" CvTextArgument="Status" CvType="Text" DesignTimeRectangle="957, 217, 154, 19" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia cls='EXCEL7' name='challenge' /&gt;&lt;uia name='Cuadrícula' /&gt;&lt;uia name='H1' /&gt;" FuzzySelectorArgument="&lt;uia cls='EXCEL7' name='challenge' /&gt;&lt;uia name='Cuadrícula' /&gt;&lt;uia name='H1' role='' automationid='' check:text='Status' /&gt;" Guid="ca5c1e17-c9fb-4df4-9f3c-746ad3d87168" InformativeScreenshot="31eccdd8dcb0eb95629abccbc38c38a8.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='challenge - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Estilos de celda'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_4" InScope="[Excel]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="878, 61, 54, 69" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIChunk' name='Estilos' /&gt;&lt;uia cls='NetUIRibbonButton' name='Estilos de celda' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIChunk' name='Estilos' /&gt;&lt;uia cls='NetUIRibbonButton' name='Estilos de celda' role='Elemento de menú' automationid='' check:fulltext='Estilos de celda' /&gt;" Guid="19c81fdd-673a-4791-b395-2e8c11bf6771" InformativeScreenshot="1a9545bac1aa46e013c2084bd3a2dd9a.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='challenge - Excel' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buena'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_5" InScope="[Excel]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable CVScreenId="ea08dc71-3aef-4944-8087-5ca6ed6a3317" CvElementArea="257, 160, 1107, 28" CvType="InputBox" DesignTimeRectangle="815, 155, 106, 28" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIChunk' name='Estilos' /&gt;&lt;uia cls='NetUIGalleryButtonGroup' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='Bueno, malo y neutral' /&gt;&lt;uia cls='NetUIGalleryButton' name='Buena' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIChunk' name='Estilos' /&gt;&lt;uia cls='NetUIGalleryButtonGroup' /&gt;&lt;uia cls='NetUIGalleryCategoryContainer' name='Bueno, malo y neutral' /&gt;&lt;uia cls='NetUIGalleryButton' name='Buena' role='Elemento de lista' automationid='' check:fulltext='Buena' /&gt;" Guid="a880f38d-3442-4ef6-8532-ee72c6fc5b0e" InformativeScreenshot="9a7f964e7384f1ee706cb3d5b752e7c7.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='challenge - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Centrar'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_6" InScope="[Excel]" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable CVScreenId="59a2c41d-ec70-43a2-a949-ffaf6ec036a6" CvElementArea="332, 103, 20, 17" CvType="Icon" DesignTimeRectangle="331, 100, 22, 23" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIChunk' name='Alineación' /&gt;&lt;uia cls='NetUIRibbonButton' name='Centrar' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIChunk' name='Alineación' /&gt;&lt;uia cls='NetUIRibbonButton' name='Centrar' role='Botón' automationid='' check:fulltext='Centrar' /&gt;" Guid="4daf7803-6476-4ab7-9659-b63bd9264bde" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAbCAYAAABiFp9rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABISURBVEhL7dExCgAwCEPRntn7g526RZRQ2iF54Bz4rnzEQzQP0f4PRQR1FcEfoTzoOkLpUJ7JVYTSHSgPuo5guls8RPMQKXMDPGCeT8Eu6BsAAAAASUVORK5CYII=" InformativeScreenshot="c06fab7ec77e519a49e8ea1612ac8408.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='challenge - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <ueab:SaveExcelFileX DisplayName="Save Excel File" sap:VirtualizedContainerService.HintSize="450,117" sap2010:WorkflowViewState.IdRef="SaveExcelFileX_1" Workbook="[Excel]" />
+                            <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="450,518" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]" SaveAfterEachRow="False">
+                              <ueab:ExcelForEachRowX.Body>
+                                <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                  <ActivityAction.Argument1>
+                                    <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                  </ActivityAction.Argument1>
+                                  <ActivityAction.Argument2>
+                                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                  </ActivityAction.Argument2>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,305" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="nicolasmuda356@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="354,217" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="ProcessABCQueue">
+                                      <ui:AddQueueItem.ItemInformation>
+                                        <InArgument x:TypeArguments="x:String" x:Key="First Name">[CurrentRow("First Name").ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Last Name">[CurrentRow("Last Name ").ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Company Name">[CurrentRow("Company Name").ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Role In Company">[CurrentRow("Role in Company").ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentRow("Email").ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Phone Number">[CurrentRow("Phone Number").ToString]</InArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="Address">[CurrentRow("Address").ToString]</InArgument>
+                                      </ui:AddQueueItem.ItemInformation>
+                                    </ui:AddQueueItem>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelForEachRowX.Body>
+                            </ueab:ExcelForEachRowX>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="546,216" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2d99a062-bd48-4e2e-8baa-ccd7680fbbf7" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://rpachallenge.com/" CVScreenId="29a0d7db-d056-494d-b61d-91e4e18735da" CvElementArea="14, 680, 317, 56" CvTextArea="149, 701, 48, 14" CvTextArgument="START" CvType="Button" DesignTimeRectangle="19, 682, 309, 54" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='waves-effect col s12 m12 l12 btn-large uiColorButton' aaname='Start' check:innerText='START' /&gt;" Guid="a6a97eba-5125-4b1d-80f0-005c38655bf5" InformativeScreenshot="c53cd32b4113a8b4772d4e582e89a987.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1376, 744" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="87e3d0548a798107aef81ac2f1f156a6.png" Selector="&lt;html app='chrome.exe' title='Nueva pestaña' /&gt;" Title="Nueva pestaña" Url="chrome://newtab/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
